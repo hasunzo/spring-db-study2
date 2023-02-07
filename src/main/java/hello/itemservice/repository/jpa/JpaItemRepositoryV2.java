@@ -27,7 +27,8 @@ public class JpaItemRepositoryV2 implements ItemRepository {
         Item findItem = repository.findById(itemId).orElseThrow();
         findItem.setItemName(updateParam.getItemName());
         findItem.setPrice(updateParam.getPrice());
-        findItem.setQuantity(updateParam.getQuantity());    }
+        findItem.setQuantity(updateParam.getQuantity());
+    }
 
     @Override
     public Optional<Item> findById(Long id) {
